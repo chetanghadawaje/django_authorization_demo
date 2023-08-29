@@ -22,5 +22,6 @@ router = DefaultRouter()
 urlpatterns = [
     re_path(r'^', include(router.urls)),
     path('admin/', admin.site.urls),
-    re_path('', include('auth_app.urls'))
+    path('accounts/', include("django.contrib.auth.urls")),
+    re_path('', include('auth_app.urls')),
 ]
